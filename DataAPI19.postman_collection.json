@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "7613d4cd-e478-40ca-b7aa-0c3bda3f0677",
-		"name": "DataAPI19",
+		"_postman_id": "15557302-beff-4275-ac97-e27945d476ab",
+		"name": "DataAPI19 - ParJupiter",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -232,8 +232,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "records",
@@ -524,8 +523,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "auth",
@@ -629,8 +627,54 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
+		},
+		{
+			"name": "scripts",
+			"item": [
+				{
+					"name": "Execute Script",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "d0723101ce806a4a3c6c3124bc829038bdcf93ce5682a537fb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{serveur}/fmi/data/{version}/databases/{database}/layouts/{layout}/script/{scriptName}?script.param={param}",
+							"protocol": "https",
+							"host": [
+								"{serveur}"
+							],
+							"path": [
+								"fmi",
+								"data",
+								"{version}",
+								"databases",
+								"{database}",
+								"layouts",
+								"{layout}",
+								"script",
+								"{scriptName}"
+							],
+							"query": [
+								{
+									"key": "script.param",
+									"value": "{param}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "container",
@@ -737,8 +781,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "globals",
@@ -786,9 +829,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
